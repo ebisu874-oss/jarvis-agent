@@ -9,6 +9,7 @@ agent = agents.Agent(
     model="mistral-large-4",
     name="jarvis",
     instructions=INSTRUCTIONS,
+    reasoning_effort="low",
 )
 
 
