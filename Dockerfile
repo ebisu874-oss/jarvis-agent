@@ -4,9 +4,8 @@ WORKDIR /app
 
 RUN pip install --no-cache-dir uv
 
-COPY pyproject.toml ./
-RUN uv pip install --system .
+RUN uv pip install --system "mistralai-agents>=1.1.0"
 
 COPY . .
 
-CMD ["uv", "run", "agents", "serve"]
+CMD ["agents", "serve"]
